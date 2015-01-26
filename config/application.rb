@@ -8,10 +8,10 @@ Bundler.require(*Rails.groups)
 
 module Blogagram
   class Application < Rails::Application
-      # Use TorqueBox::Infinispan::Cache for the Rails cache store
-  if defined? TorqueBox::Infinispan::Cache
-    config.cache_store = :torquebox_store
-  end
+    # Use TorqueBox::Infinispan::Cache for the Rails cache store
+    if defined? TorqueBox::Infinispan::Cache
+      config.cache_store = :torquebox_store
+    end
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
