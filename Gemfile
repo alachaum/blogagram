@@ -31,6 +31,11 @@ gem 'sdoc', '~> 0.4.0',                              group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-
-
 gem "torquebox", "3.1.1"
+
+group :test do
+  gem 'webmock'
+  gem 'rspec-rails', '~> 2.9'
+  gem 'simplecov'
+  gem 'factory_girl_rails'
+end
