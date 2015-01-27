@@ -4,3 +4,13 @@
 # for all configuration options.
 web:
   context: "/"
+
+queues:
+  /queues/unverified_blog_comments:
+    durable: true
+    
+messaging:
+  /queues/unverified_blog_comments:
+    CommentValidatorProcessor:
+      concurrency: 2
+  
